@@ -32,6 +32,7 @@ function getSSLValues() {
 
   if (process.env.POSTGRES_CA) {
     return {
+      rejectUnauthorized: true,
       ca: process.env.POSTGRES_CA,
     }
   }
